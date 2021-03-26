@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spirals</title>
+    <meta name="description" content="Mini Collection - Core 2 Interaction Lab">
+    <meta name="author" content="Aoi Sejima">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/dots_spiral.jpeg" />
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./script.js" defer></script>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="assets/img/dots_spiral.jpeg">
+            <h1 class="white">Dotted</h1>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="assets/img/black_white_linedrawing.jpeg">
+            <h1 class="black">Lined</h1>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="assets/img/light_shadow_spiral.jpeg">
+            <h1 class="white">Light and Shadow</h1>
+        </div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- The dots/circles -->
+    <div id="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</body>
+</html>

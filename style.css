@@ -1,0 +1,118 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    background-color: black;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+}
+
+h1 {
+    font-size: 10rem;
+    margin: auto;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    line-height: 11rem;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    position: absolute;
+    color: white;
+    font-size: 8rem;
+    top: 25%;
+    padding: 13rem;
+    transition: 0.6s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+.next {
+    right: 0rem;
+}
+
+.prev:hover, .next:hover {
+    text-shadow: 0 0 2rem white;
+}
+
+.numbertext {
+    color: white;
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-left: 27rem;
+    position: absolute;
+    top: 0;
+}
+
+#dots {
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 812px) {  
+    h1 {
+        font-size: 7rem;
+        margin-top: 7rem;
+        margin-left: 11rem;
+    }
+
+}
