@@ -90,28 +90,115 @@ function showGems() {
 
         // creating a new div container, where our info will go
         let gemContainer = document.createElement("div");
-        gemContainer.classList.add("container");
-        document.querySelector(".container").appendChild(gemContainer);
+        gemContainer.classList.add("gem-container");
+        document.querySelector(".js-container").appendChild(gemContainer);
       
-        let gemTitle = document.createElement("h1");
-        gemTitle.classList.add("container");
+        let gemTitle = document.createElement("h2");
+        gemTitle.classList.add("gem-title");
         gemTitle.innerText = gem.fields.title;
         gemContainer.appendChild(gemTitle);
 
-        let gemShape = document.createElement("h1");
-        gemShape.classList.add("container");
+        let gemShape = document.createElement("h2");
+        gemShape.classList.add("gem-shape");
         gemShape.innerText = gem.fields.shape;
         gemContainer.appendChild(gemShape);
 
         let gemImage = document.createElement("img");
-        gemImage.classList.add("container");
+        gemImage.classList.add("gem-image");
         gemImage.src = gem.fields.image[0].url;
         gemContainer.appendChild(gemImage);
 
-        // get field from airtable
-        let gemColor = document.createElement("h1");
-        gemColor.classList.add("container");
-        gemColor.innerText = gem.fields.color;
-        gemContainer.appendChild(gemColor);
+        // add event lister
+        // when user clicks on gemContiner
+        // other elements will appear or disappear
+        gemContainer.addEventListener("click", function(){
+            // toggle = light switch
+            gemTitle.classList.toggle("active");
+            gemShape.classList.toggle("active");
+        });
+
+        // get genre field from airtable, 
+        // loop through the array and add each genre as a class to the song container
+        let gemColor = gem.fields.color;
+        gemColor.forEach(function(color){
+            gemContainer.classList.add(color)
+        });
+
+        // add event listener to filter (to add an active class to gems)
+        let filterRed = document.querySelector(".js-red");
+        filterRed.addEventListener("click", function(){
+
+            if (gemContainer.classList.contains("red")) {
+                gemContainer.style.display = "block";
+            } else {
+                gemContainer.style.display = "none";
+            }
+        });
+
+        let filterOrange = document.querySelector(".js-orange");
+        filterOrange.addEventListener("click", function(){
+
+            if (gemContainer.classList.contains("orange")) {
+                gemContainer.style.display = "block";
+            } else {
+                gemContainer.style.display = "none";
+            }
+        });
+
+
+        let filterGreen = document.querySelector(".js-green");
+        filterGreen.addEventListener("click", function(){
+
+            if (gemContainer.classList.contains("green")) {
+                gemContainer.style.display = "block";
+            } else {
+                gemContainer.style.display = "none";
+            }
+        });
+
+        let filterBlue = document.querySelector(".js-blue");
+        filterBlue.addEventListener("click", function(){
+
+            if (gemContainer.classList.contains("blue")) {
+                gemContainer.style.display = "block";
+            } else {
+                gemContainer.style.display = "none";
+            }
+        });
+
+        let filterPurple = document.querySelector(".js-purple");
+        filterPurple.addEventListener("click", function(){
+
+            if (gemContainer.classList.contains("purple")) {
+                gemContainer.style.display = "block";
+            } else {
+                gemContainer.style.display = "none";
+            }
+        });
+
+        let filterPink = document.querySelector(".js-pink");
+        filterPink.addEventListener("click", function(){
+
+            if (gemContainer.classList.contains("pink")) {
+                gemContainer.style.display = "block";
+            } else {
+                gemContainer.style.display = "none";
+            }
+        });
+
+        let filterWhite = document.querySelector(".js-white");
+        filterWhite.addEventListener("click", function(){
+
+            if (gemContainer.classList.contains("white")) {
+                gemContainer.style.display = "block";
+            } else {
+                gemContainer.style.display = "none";
+            }
+        });
+
+        let filterReset = document.querySelector(".js-reset");
+        filterReset.addEventListener("click", function(){
+            gemContainer.style.display = "block";
+        });
 });
 }
