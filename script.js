@@ -112,7 +112,6 @@ function showGems() {
             }
         });
 
-
         let filterGreen = document.querySelector(".js-green");
         filterGreen.addEventListener("click", function(){
 
