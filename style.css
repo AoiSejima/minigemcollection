@@ -13,25 +13,6 @@ h1 {
     letter-spacing: 25rem;
 }
 
-span {
-    display: block;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    line-height: 2rem;
-}
-
-.js-filter  {
-    position: fixed;
-    margin-top: 3rem;
-    margin-left: -26.7rem;
-    font-size: 2rem;
-}
-
-.js-reset {
-    border: 3px solid white;
-    padding: 1rem;
-}
-
 .js-container {
     width: 40%;
     display: grid;
@@ -43,15 +24,42 @@ span {
     text-align: center;
 }
 
+.js-filter  {
+    position: fixed;
+    margin-top: 3rem;
+    margin-left: -26.7rem;
+    font-size: 2rem;
+}
+
+span {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
 .gem-container {
     width: 100%;
     border-radius: 10px;
     margin: auto;
 }
-
 .gem-container:hover {
     box-shadow: 0px 0px 80px rgb(255, 255, 255);
     transition: all 0.2s ease-in-out;
+}
+
+.gem-title {display: none;}
+.gem-title.active {display: block;}
+
+.gem-shape {display: none;}
+.gem-shape.active {display: block;}
+
+.gem-color {display: none;}
+.gem-color.active {display: block;}
+
+.js-reset {
+    border: 3px solid white;
+    padding: 1rem;
 }
 
 img {
@@ -59,30 +67,6 @@ img {
     height: auto;
     display: block;
     margin: auto;
-}
-
-.gem-title {
-    display: none;
-}
-
-.gem-title.active {
-    display: block;
-}
-
-.gem-shape {
-    display: none;
-}
-
-.gem-shape.active {
-    display: block;
-}
-
-.gem-color {
-    display: none;
-}
-
-.gem-color.active {
-    display: block;
 }
 
 @media only screen and (max-width: 812px) {  
