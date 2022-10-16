@@ -5,7 +5,7 @@ let Airtable = require("airtable");
 console.log(Airtable);
 
 // connect our airtable base to our website using API key
-let base = new Airtable({ apiKey: "keyHgmsY3PeOahiOd" }).base(
+let base = new Airtable({ apiKey: "key2fjkLzrAFCnstQ" }).base(
     "appkjFKTVoK8Banc1"
 );
 
